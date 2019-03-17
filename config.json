@@ -1,17 +1,18 @@
 {
   "locals": {
     "url": "http://localhost:8080",
-    "name": "The Wintersmith's blog",
-    "owner": "Someone",
-    "description": "Ramblings of an immor(t)al demigod"
+    "name": "valantonini.com",
+    "owner": "val antonini",
+    "description": "A blog about all things programming by val antonini."
   },
   "plugins": [
-    "./plugins/paginator.coffee"
+    "./plugins/paginator.coffee",
+    "wintersmith-sassy"
   ],
   "require": {
+    "typogr": "typogr",
     "moment": "moment",
-    "_": "underscore",
-    "typogr": "typogr"
+    "_": "underscore"
   },
   "pug": {
     "pretty": true
@@ -22,5 +23,11 @@
   },
   "paginator": {
     "perPage": 3
+  },
+  "sass": {
+    "debug": true,
+    "includePaths": [
+      "./content/styles"
+    ]
   }
 }
