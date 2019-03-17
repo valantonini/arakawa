@@ -10,9 +10,7 @@
     "wintersmith-sassy"
   ],
   "require": {
-    "typogr": "typogr",
-    "moment": "moment",
-    "_": "underscore"
+    "typogr": "typogr"
   },
   "pug": {
     "pretty": true
