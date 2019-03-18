@@ -25,7 +25,7 @@
   "sass": {
     "debug": true,
     "includePaths": [
-      "node_modules/spectre.css/src/",
+      "node_modules/",
       "content/styles"
     ]
   }
