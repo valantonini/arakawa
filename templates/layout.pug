@@ -12,14 +12,19 @@ html(lang='en')
         block title
           = locals.name
   body
-    header
+    .watermark-wrap
+      header.navbar
+        section.navbar-section
+          a(href="#").btn.btn-link blog
+          a(href="#").btn.btn-link about
+          a(href="#").btn.btn-link resume
+          a(href="#").btn.btn-link services
+          a(href="#").btn.btn-link contact
+        
       div
-        block header
-          div
-    div
-      block content
-    footer
-      block footer
-        section
-          p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-            a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+        block content
+      footer
+        block footer
+          section
+            p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
+              a(href='https://github.com/jnordberg/wintersmith') Wintersmith
