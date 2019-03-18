@@ -1,0 +1,9 @@
+@import "spectre.css/src/variables";
+.post {
+    padding-top: $unit-10;
+
+    h1 {
+        padding-bottom: $unit-5;
+        text-align: center;
+    }
+}

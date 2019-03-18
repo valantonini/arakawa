@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  section
-    div Hello World
+  section.post-list
+    each article in articles
+      article.post
+        header.text-center
+          .article-date= moment.utc(article.date).format('DD MMMM YYYY')
+          a(href=article.url)
+            h1= article.title
+          a(href=article.url) continue reading

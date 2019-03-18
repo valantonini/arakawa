@@ -1,0 +1,17 @@
+@import "spectre.css/src/variables";
+
+.post-list {
+    .article-date {
+        font-size: $unit-5;
+    }
+
+    h1 {
+        font-size: $unit-7;
+        margin-top: $unit-1;
+        margin-bottom: $unit-1;
+    }
+
+    .post {
+        margin-top: 2em;
+    }
+}
