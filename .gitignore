@@ -1,6 +1,9 @@
 # OS
 .DS_STORE
 
+# Wintersmith
+build
+
 # Logs
 logs
 *.log

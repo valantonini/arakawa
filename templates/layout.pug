@@ -7,6 +7,7 @@ html(lang='en')
       meta(charset='utf-8')
       meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
       meta(name='viewport', content='width=device-width, initial-scale=1')
+      link(rel="shortcut icon", type="image/png", href=contents.images['favicon.png'].url)
       link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Anonymous+Pro:400|Merriweather:400')
       link(rel='stylesheet', href=contents.styles['site.scss'].url)
       title
@@ -14,7 +15,7 @@ html(lang='en')
           = locals.name
   body
     .watermark-wrap
-      header.navbar
+      header.navbar.header
         section.navbar-section
           a(href="#").btn.btn-link blog
           a(href="#").btn.btn-link about
@@ -22,9 +23,11 @@ html(lang='en')
           a(href="#").btn.btn-link services
           a(href="#").btn.btn-link contact
         section.navbar-center
-          span valantonini.com
+          img(src=contents.images['logo.png'].url)
+          a(href="/") valantonini.com
         section.navbar-section
-          a(href="#").btn.btn-link github
+          a(href="#")
+            img(src=contents.images.icons.arakawa['github.png'].url)
       .container.grid-lg
         .columns
           .column.col-12
