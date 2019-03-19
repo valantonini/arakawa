@@ -3,7 +3,7 @@ title:  "How to tell if a transform is facing another in Unity3d"
 author: val antonini
 date: 2013-06-10
 template: article.pug
-temp: /2013/06/10
+location: /2013/06/10
 ---
 
 

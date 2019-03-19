@@ -5,7 +5,7 @@
     "owner": "val antonini",
     "description": "A blog about all things programming by val antonini."
   },
-  "filenameTemplate": "/{{ page.metadata.temp }}/index.html",
+  "filenameTemplate": "/{{ page.metadata.location }}/index.html",
   "plugins": [
     "./plugins/paginator.coffee",
     "wintersmith-sassy"
