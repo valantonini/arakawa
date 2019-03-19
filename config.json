@@ -5,6 +5,9 @@
     "owner": "val antonini",
     "description": "A blog about all things programming by val antonini."
   },
+  "ignore": [
+    "assets"
+  ],
   "filenameTemplate": "/{{ page.metadata.location }}/index.html",
   "plugins": [
     "./plugins/paginator.coffee",

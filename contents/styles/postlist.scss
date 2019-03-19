@@ -6,9 +6,10 @@
     }
 
     h1 {
-        font-size: $unit-7;
+        font-size: $unit-6 !important;
         margin-top: $unit-1;
         margin-bottom: $unit-1;
+        color: $link-color-light;
     }
 
     .post {

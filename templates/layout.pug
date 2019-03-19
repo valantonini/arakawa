@@ -20,20 +20,20 @@ html(lang='en')
           a(href="#").btn.btn-link blog
           a(href="#").btn.btn-link about
           a(href="#").btn.btn-link resume
-          a(href="#").btn.btn-link services
           a(href="#").btn.btn-link contact
-        section.navbar-center
-          img(src=contents.images['logo.png'].url)
-          a(href="/") valantonini.com
+        section.navbar-center valantonini.com
         section.navbar-section
-          a(href="#")
-            img(src=contents.images.icons.arakawa['github.png'].url)
       .container.grid-lg
         .columns
           .column.col-12
             block content
       footer
         block footer
+          section
+            a(href="#")
+              img(src=contents.images.icons.social['github.png'].url)
+            a(href="/")
+              img(src=contents.images['logo.png'].url)
           section
             p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
               a(href='https://github.com/jnordberg/wintersmith') Wintersmith
