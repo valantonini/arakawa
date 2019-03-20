@@ -10,6 +10,7 @@ location: /2013/06/10
 A helpful method to check to see if a transform is facing another transform in Unity3d
 
 
+
 ```cs
 private bool IsFacing(Transform target)
 {

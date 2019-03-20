@@ -1,0 +1,12 @@
+@import "variables";
+@import "spectreVariables";
+
+.off-canvas {
+    .off-canvas-sidebar {
+        background-color: #eaeaea;
+        background: $fibers-background;
+    }
+    .off-canvas-overlay {
+        background: rgba($primary-color, .33);
+    }
+}
