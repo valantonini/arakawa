@@ -8,7 +8,6 @@ html(lang='en')
       meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
       meta(name='viewport', content='width=device-width, initial-scale=1')
       link(rel="shortcut icon", type="image/png", href=contents.images['favicon.png'].url)
-      link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Anonymous+Pro:400|Merriweather:400')
       link(rel='stylesheet', href=contents.styles['site.scss'].url)
       title
         block title
@@ -17,7 +16,7 @@ html(lang='en')
     .watermark-wrap
       .off-canvas
         
-        a(class="off-canvas-toggle btn btn-primary btn-action", href="#sidebar")
+        a(class="off-canvas-toggle btn btn-sm btn-primary btn-action", href="#sidebar")
           i(class="icon icon-menu")
         
         #sidebar.off-canvas-sidebar
@@ -28,8 +27,18 @@ html(lang='en')
      
         .off-canvas-content
           .container
+            header.navbar
+              section.navbar-section
+                a(href="/")
+                  img(src=contents.images['logo.png'].url, class="icon show-xs")
+              section.navbar-center
+                a(href="/")
+                  img(src=contents.images['logo.png'].url, class="icon hide-xs")
+              section.navbar-section
+                a(href="#", class="btn btn-link") blog
+                a(href="#", class="btn btn-link") about
+                a(href="#", class="btn btn-link") resume
             block content
-            
             footer
               block footer   
               section

@@ -1,11 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Merriweather');
+
+@import "variables";
 @import "spectreVariables";
 @import "spectreCustom";
+@import "sidebar";
 @import "background";
+@import "icons";
 @import "postlist";
 @import "post";
 @import "code";
 @import "footer";
-@import "spectreOffCanvasResponsive.scss";
+@import "spectreOffCanvas";
+@import "spectreComponents";
 
 //  @import "spectre.css/src/spectre";
 //  @import "spectre.css/src/spectre-exp";
