@@ -6,7 +6,8 @@
     "description": "A blog about all things programming by val antonini."
   },
   "ignore": [
-    "assets"
+    "assets",
+    "contents/scripts/nav.js"
   ],
   "filenameTemplate": "/{{ page.metadata.location }}/index.html",
   "plugins": [
