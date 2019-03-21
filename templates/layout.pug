@@ -15,22 +15,25 @@ html(lang='en')
           = locals.name
   body
     nav.navbar(role='navigation', aria-label='main navigation')
-      .navbar-brand
-        a(href="/", class="navbar-item")
-          img(src=contents.images['logo.png'].url)
-        a.navbar-burger.burger(role='button', aria-label='menu', aria-expanded='false', data-target='navbarBasicExample')
-          span(aria-hidden='true')
-          span(aria-hidden='true')
-          span(aria-hidden='true')
-      #navbarBasicExample.navbar-menu
-        .navbar-start
-          a.navbar-item
-            | blog
-          a.navbar-item
-            | about
-          a.navbar-item
-            | resume
-          a.navbar-item
-            | contact
-    block content
-    block footer
+      .container
+        .navbar-brand
+          a(href="/", class="navbar-item")
+            img(src=contents.images['logo.png'].url)
+          a.navbar-burger.burger(role='button', aria-label='menu', aria-expanded='false', data-target='navbarBasicExample')
+            span(aria-hidden='true')
+            span(aria-hidden='true')
+            span(aria-hidden='true')
+        #navbarBasicExample.navbar-menu
+          .navbar-start
+            a.navbar-item
+              | blog
+            a.navbar-item
+              | about
+            a.navbar-item
+              | resume
+            a.navbar-item
+              | contact
+    main.section
+      .container
+        block content
+        block footer
