@@ -1,7 +1,7 @@
 {
   "dependencies": {
+    "bulma": "^0.7.4",
     "moment": "^2.22.2",
-    "spectre.css": "^0.5.8",
     "typogr": "0.6.x",
     "underscore": "^1.9.1",
     "wintersmith-sassy": "^1.2.0"

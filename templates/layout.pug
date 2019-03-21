@@ -13,39 +13,5 @@ html(lang='en')
         block title
           = locals.name
   body
-    .watermark-wrap
-      .off-canvas
-        
-        a(class="off-canvas-toggle btn btn-sm btn-primary btn-action", href="#sidebar")
-          i(class="icon icon-menu")
-        
-        #sidebar.off-canvas-sidebar
-          //- side bar menu here
-          a(href="#close") x
-
-        a(class="off-canvas-overlay", href="#close")
-     
-        .off-canvas-content
-          .container
-            header.navbar
-              section.navbar-section
-                a(href="/")
-                  img(src=contents.images['logo.png'].url, class="icon show-xs")
-              section.navbar-center
-                a(href="/")
-                  img(src=contents.images['logo.png'].url, class="icon hide-xs")
-              section.navbar-section
-                a(href="#", class="btn btn-link") blog
-                a(href="#", class="btn btn-link") about
-                a(href="#", class="btn btn-link") resume
-            block content
-            footer
-              block footer   
-              section
-                a(href="#")
-                  img(src=contents.images.icons.social['github.png'].url)
-                a(href="/")
-                  img(src=contents.images['logo.png'].url)
-              section
-                p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-                  a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+    block content
+    block footer
