@@ -5,4 +5,5 @@ $text: $primary-color;
 $title-color: $primary-color;
 
 $navbar-item-hover-background-color: transparent;
-$navbar-item-hover-color: lighten($primary-color, 15%);
+$navbar-item-hover-color: $primary-color-light;
+$link: $primary-color-dark;

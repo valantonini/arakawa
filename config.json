@@ -8,12 +8,13 @@
   },
   "ignore": [
     "assets",
-    "contents/scripts/nav.js"
+    "**/*.ts",
+    "**/*.scss",
+    "**/*.DS_Store"
   ],
   "filenameTemplate": "/{{ page.metadata.location }}/index.html",
   "plugins": [
-    "./plugins/paginator.coffee",
-    "wintersmith-sassy"
+    "./plugins/paginator.coffee"
   ],
   "require": {
     "moment": "moment",
@@ -30,12 +31,5 @@
   "paginator": {
     "perPage": 3,
     "articles": "posts"
-  },
-  "sass": {
-    "debug": false,
-    "includePaths": [
-      "node_modules/",
-      "content/styles"
-    ]
   }
 }

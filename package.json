@@ -1,17 +1,19 @@
 {
   "dependencies": {
-    "bulma": "^0.7.4",
+    "bulma": "^0.7.4"
+  },
+  "private": true,
+  "devDependencies": {
+    "gulp-sass": "^4.0.2",
     "gulp": "^4.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-typescript": "^5.0.1",
     "gulp-uglify-es": "^1.0.4",
-    "moment": "^2.22.2",
+    "node-sass": "^4.11.0",
     "typescript": "^3.3.4000",
+    "moment": "^2.22.2",
     "typogr": "0.6.x",
-    "underscore": "^1.9.1",
-    "wintersmith-sassy": "^1.2.0"
-  },
-  "private": true,
-  "devDependencies": {}
+    "underscore": "^1.9.1"
+  }
 }

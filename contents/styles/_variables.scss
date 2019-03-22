@@ -1,3 +1,5 @@
-$fibers-background: url("/images/background/paper_fibers.png") repeat;
+$fibers-background: url("/images/background/paperfibers.png") repeat;
 $primary-color: #4a4a4a;
-$primary-color-light: #eaeaea;
+//$primary-color-light: #eaeaea;
+$primary-color-light: lighten($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 15%);
