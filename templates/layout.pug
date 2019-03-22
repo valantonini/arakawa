@@ -15,7 +15,7 @@ html(lang='en')
           = locals.name
   body
     nav.navbar(role='navigation', aria-label='main navigation')
-      .container
+      .container.is-fluid
         .navbar-brand
           a(href="/", class="navbar-item")
             img(src=contents.images['logo.png'].url)
@@ -34,6 +34,15 @@ html(lang='en')
             a.navbar-item
               | contact
     main.section
-      .container
+      .container.unti-widescreen
         block content
-        block footer
+    footer
+      block footer
+      section
+        a(href=locals.githubUrl, title="github.com/valantonini")
+          img(src=contents.images.icons.social['github.png'].url)
+        //- a(href="/")
+        //-   img(src=contents.images['logo.png'].url)
+      section
+        p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
+          a(href='https://github.com/jnordberg/wintersmith') Wintersmith
