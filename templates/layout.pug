@@ -25,9 +25,9 @@ html(lang='en')
             span(aria-hidden='true')
         #navbarBasicExample.navbar-menu
           .navbar-start
-            a.navbar-item
+            a.navbar-item(href="/")
               | blog
-            a.navbar-item
+            a.navbar-item(href="/about")
               | about
             a.navbar-item
               | resume
@@ -45,4 +45,4 @@ html(lang='en')
         //-   img(src=contents.images['logo.png'].url)
       section
         p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-          a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+          a(href='https://github.com/jnordberg/wintersmith') wintersmith
