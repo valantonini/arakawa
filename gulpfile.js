@@ -28,7 +28,9 @@ const scss = () => {
     return src('contents/styles/site.scss')
         .pipe(concat('site.min.css'))
         .pipe(sass({
+            //sourceMap: true,
             outputStyle: 'compressed',
+            //outputStyle: 'nested',
             "includePaths": [
                 "node_modules/",
                 "content/styles"

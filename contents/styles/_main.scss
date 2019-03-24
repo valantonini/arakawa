@@ -1,5 +1,3 @@
 main {
-    @media screen and (min-width: $tablet) {
-        padding: 200px;
-    }
+    @extend .section;
 }

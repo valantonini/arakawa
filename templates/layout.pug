@@ -33,16 +33,17 @@ html(lang='en')
               | resume
             a.navbar-item
               | contact
-    main.section
+    main
       .container.unti-widescreen
         block content
     footer
-      block footer
-      section
-        a(href=locals.githubUrl, title="github.com/valantonini")
-          img(src=contents.images.icons.social['github.png'].url)
-        //- a(href="/")
-        //-   img(src=contents.images['logo.png'].url)
-      section
-        p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-          a(href='https://github.com/jnordberg/wintersmith') wintersmith
+      .content
+        block footer
+        section
+          a(href=locals.githubUrl, title="github.com/valantonini")
+            img(src=contents.images.icons.social['github.png'].url)
+          //- a(href="/")
+          //-   img(src=contents.images['logo.png'].url)
+        section
+          p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
+            a(href='https://github.com/jnordberg/wintersmith') wintersmith

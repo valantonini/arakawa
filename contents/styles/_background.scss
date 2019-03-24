@@ -1,12 +1,3 @@
-@import "variables";
-html,body, .watermark-wrap {
-    height: 100vh;
-}
-
 body {
     background: $fibers-background
 }
-
-// .watermark-wrap {
-//     background: url("/images/background/arakawawatermark.png") repeat-y scroll center top transparent;
-// }

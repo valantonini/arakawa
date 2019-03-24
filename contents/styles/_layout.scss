@@ -1,0 +1,6 @@
+html,
+body,
+main { 
+    height: auto;
+    min-height: calc(100vh - #{$footer-height + 60px});
+}

@@ -12,8 +12,8 @@ location: /2018/09/30
 
 I've gotten a first version of a procedural dungeon generator written in C#. I aim for this to be compatible with
 the Unity but at the moment it looks like Unity isn't a fan of a List of Lists. You can see the code on 
-[Github](https://github.com/valantonini/Promethean) and view some generated floor maps in the browser 
-[here](https://prometheanapp.azurewebsites.net).
+[Github](https://github.com/valantonini/Promethean "Promethean on Github") and view some generated floor maps in the browser 
+[here](https://prometheanapp.azurewebsites.net "Promethean online sample").
   
 The browser rendererjust renders a bunch of coloured tiles on a canvas. Each colour represents a different piece
 (inside corner, outside corner) and/or a pieces orientation.
@@ -21,7 +21,7 @@ The browser rendererjust renders a bunch of coloured tiles on a canvas. Each col
 It works by generating a whole bunch of rooms (rectangles). At first I was going to make sure they didn't overlap
 but the overlapping rooms meant that not every room was just a boring rectangle.
 
-I then use [my A* implementation](https://github.com/valantonini/AStar) to link all the rooms together by 
+I then use [my A* implementation](https://github.com/valantonini/AStar "Val Antonini A* implementation") to link all the rooms together by 
 ordering the rooms by distance from origin and then drawing a path from room center to room center. I then
 double the size of everything (so a tile is now represented by 2 x 2 tile of the same type). I then run over the
 floor tiles and identify what should be walls, corners etc. By doubling the tiles in the previous step, I can 
