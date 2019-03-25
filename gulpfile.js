@@ -18,6 +18,8 @@ const purge = () => {
             allowEmpty: true
         }, 'contents/styles/site.min.css', {
             allowEmpty: true
+        }, 'contents/scripts/search.min.css', {
+            allowEmpty: true
         })
         .pipe(clean({
             force: true
@@ -49,13 +51,25 @@ const ts = () => {
         .pipe(dest('contents/scripts', {
             sourcemaps: false
         }))
-
 };
+
+const js = () => {
+    return src(['contents/scripts/simple-jekyll-search.js', 'contents/scripts/search.js'])
+        .pipe(concat('search.min.js'))
+        //.pipe(uglify())
+        .pipe(dest('contents/scripts', {
+            sourcemaps: false
+        }))
+};
+
 
 exports.default =  (done) => {
     series(purge)();
-    parallel(ts, scss)();
+    parallel(ts, js, scss)();
     done();
 }
 
-exports.watch = () => watch(['contents/scripts/*.ts', 'contents/styles/*.scss'], exports.default);
+exports.watch = (done) => {
+    exports.default(done);
+    return watch(['contents/scripts/*.ts','contents/scripts/*.js', 'contents/styles/*.scss', '!contents/scripts/*.min.js'], exports.default);
+}

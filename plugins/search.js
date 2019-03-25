@@ -1,30 +1,29 @@
 const moment = require('moment');
 
 function index(env, callback) {
-    class SimpleSearch extends env.plugins.Page {
+    class SimpleSearch extends env.ContentPlugin {
         getFilename() {
             return 'search.json'
         }
 
         getView() {
             return (env, locals, contents, templates, callback) => {
-                if (!locals.url) {
-                    return callback(new Error('locals.url must be defined.'))
-                }
+                
                 const entries = env.helpers.contents.list(contents).filter((entry) => (
                     entry instanceof env.plugins.MarkdownPage && !entry.metadata.noindex
                 ))
 
                 const search = [];
                 for (const e of entries) {
-                    console.log(e);
+                    if(!e.metadata.location){
+                        continue;
+                    }
                     search.push({
                         title: e.title,
-                        category: e.category || "",
-                        tags: e.metadata.tags ? e.metadata.tags.join(",") : "",
+                        category: e.category || "abc",
+                        tags: e.metadata.tags ? e.metadata.tags.join(",") : "abc",
                         url: e.metadata.location,
                         date: moment(e.date)
-
                     })
                 }
 

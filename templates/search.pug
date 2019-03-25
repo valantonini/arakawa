@@ -1,0 +1,9 @@
+extends layout
+block append head
+    script(src=contents.scripts['search.min.js'].url)
+block content
+    .search
+        h1 search
+        script(src=contents.scripts['search.min.js'].url)
+        input#searchInput(type='text', placeholder='Search blog posts..')
+        ul#resultsContainer

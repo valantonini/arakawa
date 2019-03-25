@@ -1,0 +1,14 @@
+.search {
+    input {
+        @extend .input;
+    }
+
+    ul#resultsContainer {
+        margin-top: $size-1;
+
+        li {
+            font-size: $size-4;
+            margin: $size-7;
+        }
+    }
+}
