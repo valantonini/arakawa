@@ -1,0 +1,11 @@
+.about {
+    margin-top: $size-1;
+    img {
+        @extend .image;
+        @extend .is-256x256;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}

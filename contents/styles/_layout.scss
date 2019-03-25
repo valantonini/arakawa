@@ -4,3 +4,7 @@ main {
     height: auto;
     min-height: calc(100vh - #{$footer-height + 60px});
 }
+
+.navbar-burger {
+    min-height: 52px !important;
+}
