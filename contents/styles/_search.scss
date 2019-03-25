@@ -9,6 +9,12 @@
         li {
             font-size: $size-4;
             margin: $size-7;
+
+
+            @media screen and (max-width: $tablet) {
+                font-size: $size-6;
+            }
+            
         }
     }
 }
