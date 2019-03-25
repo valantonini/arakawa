@@ -14,7 +14,9 @@
   ],
   "filenameTemplate": "/{{ page.metadata.location }}/index.html",
   "plugins": [
-    "./plugins/paginator.coffee"
+    "./plugins/paginator.coffee",
+    "./plugins/search.js",
+    "wintersmith-contents"
   ],
   "require": {
     "moment": "moment",
