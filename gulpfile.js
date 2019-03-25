@@ -10,7 +10,7 @@ const {
     dest,
     series,
     parallel,
-    watch
+    watch,
 } = require('gulp');
 
 const purge = () => {
@@ -52,13 +52,10 @@ const ts = () => {
 
 };
 
-exports.ts = ts;
-exports.default =  () => {
+exports.default =  (done) => {
     series(purge)();
     parallel(ts, scss)();
+    done();
 }
 
-watch(['contents/scripts/*.ts', 'contents/styles/*.scss'], (cb) => {
-    exports.default();
-    cb();
-});
+exports.watch = () => watch(['contents/scripts/*.ts', 'contents/styles/*.scss'], exports.default);
