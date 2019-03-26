@@ -3,7 +3,8 @@
 
 # Wintersmith
 build
-**/site.min.*
+contents/scripts/site.min.js
+contents/styles/site.min.css
 
 # Logs
 logs
