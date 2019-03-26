@@ -6,6 +6,7 @@ block prepend title
 
 block content
   .post
-    h1= page.title
+    header
+      h1= page.title
     article
       section.content!= typogr(page.html).typogrify()

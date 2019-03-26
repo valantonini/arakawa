@@ -8,3 +8,11 @@ main {
 .navbar-burger {
     min-height: 52px !important;
 }
+
+p {
+    padding-bottom: $paragraph-spacing;
+}
+
+header {
+    margin-bottom: $header-spacing;
+}
