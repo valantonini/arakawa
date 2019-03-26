@@ -1,11 +1,16 @@
+// nav
 $navbar-background-color: transparent;
+$navbar-item-hover-background-color: transparent;
+$navbar-item-hover-color: $primary-color-light;
+
+// font
 $family-code: "Anonymous Pro","SF Mono","Segoe UI Mono","Roboto Mono",Menlo,Courier,monospace;
 $family-primary: Merriweather,Georgia,"Times New Roman",Times,serif;
 $text: $primary-color;
 $title-color: $primary-color;
 
-$navbar-item-hover-background-color: transparent;
-$navbar-item-hover-color: $primary-color-light;
 $link: $primary-color-dark;
+
+//bgs
 $body-background-color: transparent;
 $footer-background-color: transparent;
