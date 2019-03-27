@@ -25,14 +25,16 @@ html(lang='en')
             span(aria-hidden='true')
         #navbarBasicExample.navbar-menu
           .navbar-start
-            a.navbar-item(href="/")
+            a.navbar-item(href="/", title="blog")
               | blog
-            a.navbar-item(href="/about")
+            a.navbar-item(href="/about", title="about")
               | about
             a.navbar-item
               | resume
             a.navbar-item
               | contact
+            a.navbar-item(href="/search" title="search")
+              | search
     main
       .container.unti-widescreen
         block content
@@ -42,8 +44,6 @@ html(lang='en')
         section
           a(href=locals.githubUrl, title="github.com/valantonini")
             img(src=contents.images.icons.social['github.png'].url)
-          //- a(href="/")
-          //-   img(src=contents.images['logo.png'].url)
         section
           p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
             a(href='https://github.com/jnordberg/wintersmith') wintersmith

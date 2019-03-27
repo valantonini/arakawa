@@ -1,6 +1,10 @@
 .post-list {
     header {
         text-align: center;
+
+        h1 {
+            font-size: $size-4 !important;
+        }
     }
 
     a > h1 {
