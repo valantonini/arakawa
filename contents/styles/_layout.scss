@@ -9,8 +9,9 @@ main {
     min-height: 52px !important;
 }
 
+blockquote,
 p {
-    padding-bottom: $paragraph-spacing;
+    margin-bottom: $paragraph-spacing;
 }
 
 header {
