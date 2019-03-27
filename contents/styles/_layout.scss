@@ -17,3 +17,10 @@ p {
 header {
     margin-bottom: $header-spacing;
 }
+
+.attribution {
+    font-size: $size-7;
+    p{
+        margin-bottom: $paragraph-spacing * 0.33;
+    }
+}
