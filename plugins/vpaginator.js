@@ -1,4 +1,5 @@
 function index(env, callback) {
+    
     const defaults = {
         template: 'index.pug', // template that renders pages
         articles: 'articles', // directory containing contents to paginate
@@ -51,8 +52,7 @@ function index(env, callback) {
                 if ((template == null)) {
                     return callback(new Error(`unknown paginator template '${ options.template }'`));
                 }
-                console.log('sadfg');
-                console.log(this.pageCount);
+                
                 // setup the template context
                 const ctx = {
                     articles: this.articles,
@@ -74,38 +74,40 @@ function index(env, callback) {
     env.registerGenerator('paginator', function (contents, callback) {
 
         // find all articles
-        let i, page;
-        let asc, end;
         const articles = getArticles(contents);
 
         // populate pages
         const numPages = Math.ceil(articles.length / options.perPage);
         const pages = [];
-        for (i = 0, end = numPages, asc = 0 <= end; asc ? i < end : i > end; asc ? i++ : i--) {
+
+        for (let i = 0; i < numPages; i++) {
             const pageArticles = articles.slice(i * options.perPage, (i + 1) * options.perPage);
             pages.push(new PaginatorPage(i + 1, pageArticles, numPages));
         }
 
         // add references to prev/next to each page
-        for (i = 0; i < pages.length; i++) {
-            page = pages[i];
+        for (let i = 0; i < pages.length; i++) {
+            const page = pages[i];
             page.prevPage = pages[i - 1];
             page.nextPage = pages[i + 1];
         }
 
         // create the object that will be merged with the content tree (contents)
         // do _not_ modify the tree directly inside a generator, consider it read-only
-        const rv = {
+        const data = {
             pages: {}
         };
-        for (page of Array.from(pages)) {
-            rv.pages[`${ page.pageNum }.page`] = page;
-        } // file extension is arbitrary
-        rv['index.page'] = pages[0]; // alias for first page
-        rv['last.page'] = pages[(numPages - 1)]; // alias for last page
+
+        for (const page of Array.from(pages)) {
+            data.pages[`${ page.pageNum }.page`] = page;
+        } 
+        
+        // file extension is arbitrary
+        data['index.page'] = pages[0]; // alias for first page
+        data['last.page'] = pages[(numPages - 1)]; // alias for last page
 
         // callback with the generated contents
-        return callback(null, rv);
+        return callback(null, data);
     });
 
     // add the article helper to the environment so we can use it later
