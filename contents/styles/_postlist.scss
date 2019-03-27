@@ -6,4 +6,10 @@
     a > h1 {
         text-decoration: underline;
     }
+    
+    article {
+        a {
+            line-height: 3.5;
+        }
+    }
 }
