@@ -9,7 +9,7 @@ function index(env, callback) {
 
     // assign defaults any option not set in the config file
     const options = env.config.paginator || {};
-    for (let key in defaults) {
+    for (const key in defaults) {
         if (options[key] == null) {
             options[key] = defaults[key];
         }
@@ -36,11 +36,9 @@ function index(env, callback) {
         }
 
         getFilename() {
-            if (this.pageNum === 1) {
-                return options.first;
-            } else {
-                return options.filename.replace('%d', this.pageNum);
-            }
+            return this.pageNum === 1 ?
+                options.first :
+                options.filename.replace('%d', this.pageNum);
         }
 
         getView() {
@@ -53,8 +51,8 @@ function index(env, callback) {
                 if ((template == null)) {
                     return callback(new Error(`unknown paginator template '${ options.template }'`));
                 }
-                    console.log('sadfg');
-                    console.log(this.pageCount);
+                console.log('sadfg');
+                console.log(this.pageCount);
                 // setup the template context
                 const ctx = {
                     articles: this.articles,
