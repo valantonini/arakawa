@@ -19,6 +19,7 @@
     "typescript": "^3.3.4000",
     "typogr": "0.6.x",
     "underscore": "^1.9.1",
-    "wintersmith-contents": "^1.0.0"
+    "wintersmith-contents": "^1.0.0",
+    "wintersmith-sitemap": "^1.0.0"
   }
 }

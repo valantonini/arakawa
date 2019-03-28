@@ -16,7 +16,8 @@
   "plugins": [
     "./plugins/vpaginator.js",
     "./plugins/search.js",
-    "wintersmith-contents"
+    "wintersmith-contents",
+    "wintersmith-sitemap"
   ],
   "require": {
     "moment": "moment",
