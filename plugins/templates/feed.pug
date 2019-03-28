@@ -1,0 +1,14 @@
+doctype xml
+rss(xmlns:atom="http://www.w3.org/2005/Atom", version="2.0")
+    channel
+        title valantonini.com
+        description val antonini - brisbane based software developer
+        link=locals.url
+        atom:link(href=locals.url rel="self" type="application/rss+xml")
+        for entry in entries
+            item
+                title=entry.metadata.title
+                description=entry.metadata.body
+                pubdate=entry.metadata.date
+                link=locals.url + entry.url
+                guid(isPermaLink="true")=locals.url + entry.url
