@@ -1,6 +1,11 @@
 extends layout
+
 block append head
     script(src=contents.scripts['search.min.js'].url)
+
+block prepend title
+  | #{ page.title + ' - '}
+  
 block content
     .search
         h1 search

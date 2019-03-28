@@ -1,4 +1,8 @@
 extends layout
+
+block prepend title
+  | #{ page.title + ' - '}
+  
 block content
     header
         h1 message sent
