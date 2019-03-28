@@ -1,0 +1,21 @@
+.resume {
+    h3 {
+        font-size: $size-4;
+        text-align: center;
+    }
+    h4 {
+        //text-decoration: underline;
+        font-size: $size-5;
+    }
+
+    ul {
+        margin-bottom: $paragraph-spacing;
+        li {
+            @extend .tag;
+            @extend .is-white;
+        }
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
