@@ -1,5 +1,5 @@
 ---
 title:  "message sent"
-template: success.pug
+template: article.pug
 location: /success
 ---
