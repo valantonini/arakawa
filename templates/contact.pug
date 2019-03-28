@@ -1,0 +1,21 @@
+extends layout
+block content
+    header
+        h1 contact
+        h2 brisbane based software developer
+    section.contact
+        .field
+            label name
+            .control
+                input(name="name", type="text", placeholder="name")
+        .field
+            label email
+            .control
+                input(name="email", type="email", placeholder="email")
+        .field
+            label message
+            .control
+                textarea(name="message", type="message", placeholder="message")
+        .field
+            .control
+                button Submit

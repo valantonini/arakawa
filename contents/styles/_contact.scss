@@ -1,0 +1,18 @@
+.contact {
+    label {
+        @extend .label;
+    }
+
+    input {
+        @extend .input;
+    }
+
+    textarea {
+        @extend .textarea;
+    }
+
+    button {
+        @extend .button;
+        @extend .is-link;
+    }
+}
