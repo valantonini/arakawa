@@ -4,18 +4,21 @@ block content
         h1 contact
         h2 brisbane based software developer
     section.contact
-        .field
-            label name
-            .control
-                input(name="name", type="text", placeholder="name")
-        .field
-            label email
-            .control
-                input(name="email", type="email", placeholder="email")
-        .field
-            label message
-            .control
-                textarea(name="message", type="message", placeholder="message")
-        .field
-            .control
-                button Submit
+        form(action="https://getsimpleform.com/messages?form_api_token=5d79bdfcb8e322633739d55a81fadd41", method="post")
+            input(type='hidden', name='redirect_to', value='http://localhost:8080/success')
+            input(type='hidden', name='akismet_key', value='789795376a8f')
+            .field
+                label name
+                .control
+                    input(name="name", type="text", placeholder="name")
+            .field
+                label email
+                .control
+                    input(name="email", type="email", placeholder="email")
+            .field
+                label message
+                .control
+                    textarea(name="message", type="message", placeholder="message")
+            .field
+                .control
+                    button Submit
