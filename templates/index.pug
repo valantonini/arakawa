@@ -14,6 +14,8 @@ block content
           a(href=article.url)
             h1= article.title
           a(href=article.url) continue reading
+          .text-center
+            img(src=contents.images['logo.png'].url)
 block prepend footer       
   section
     nav.pagination.is-centered(role="navigation", aria-label="pagination")

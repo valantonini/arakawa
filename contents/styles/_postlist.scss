@@ -1,7 +1,10 @@
 .post-list {
     header {
         text-align: center;
-
+        margin-bottom: 0;
+        :first {
+            color: blue;
+        }
         h1 {
             font-size: $size-4 !important;
         }
