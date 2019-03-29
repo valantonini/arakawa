@@ -9,4 +9,4 @@ block content
     header
       h1= page.title
     article
-      section.content!= typogr(page.html).typogrify()
+      section!= typogr(page.html).typogrify()

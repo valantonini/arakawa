@@ -39,14 +39,13 @@ html(lang='en')
       .container.unti-widescreen
         block content
     footer
-      .content
-        block footer
-        section
-          a(href=locals.githubUrl, title="github.com/valantonini")
-            img(src=contents.images.icons.social['github.png'].url)
-        section.attribution
-          p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-            a(href="https://github.com/jnordberg/wintersmith", target="_blank") wintersmith
-          p
-            | background from 
-            a(href="https://subtlepatterns.com", title="https://subtlepatterns.com", target="_blank") subtlepatterns.com
+      block footer
+      section
+        a(href=locals.githubUrl, title="github.com/valantonini")
+          img(src=contents.images.icons.social['github.png'].url)
+      section.attribution
+        p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
+          a(href="https://github.com/jnordberg/wintersmith", target="_blank") wintersmith
+        p
+          | background from 
+          a(href="https://subtlepatterns.com", title="https://subtlepatterns.com", target="_blank") subtlepatterns.com

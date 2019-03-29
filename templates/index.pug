@@ -21,8 +21,12 @@ block prepend footer
     nav.pagination.is-centered(role="navigation", aria-label="pagination")
       if prevPage
         a.pagination-previous(href=prevPage.url) newer
+      else
+        a.pagination-previous(href="#", disabled) newer
       if nextPage
         a.pagination-next(href=nextPage.url) older
+      else
+        a.pagination-next(href="#", disabled) older
       - var i = 0
       ul.pagination-list
         while i < pageCount
