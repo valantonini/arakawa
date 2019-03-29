@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "10"
+install:
+  - npm install wintersmith -g
+  - npm install gulp-cli -g
+  - npm install
+script:
+  - gulp publish
