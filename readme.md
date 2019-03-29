@@ -1,4 +1,4 @@
 
-# Blog
+# valantonini.com
 
-The default [wintersmith](https://github.com/jnordberg/wintersmith) template
+[valantonini.com](https://valantonini.com) [wintersmith](https://github.com/jnordberg/wintersmith) site and blog.
