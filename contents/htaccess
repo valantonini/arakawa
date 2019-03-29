@@ -1,0 +1,108 @@
+ErrorDocument 404 /404/index.html
+
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} ^http://([^.]+\.)*semalt\.com [NC]
+RewriteRule (.*) http://www.semalt.com [R=301,L]
+
+RewriteCond %{HTTP_REFERER} .*buttons\-for\-website\.com [NC]
+RewriteCond %{HTTP_REFERER} .*darodar\.com [NC]
+RewriteCond %{HTTP_REFERER} .*forum.topic42499658.darodar.com [NC]
+RewriteCond %{HTTP_REFERER} .*shopping\.ilovevitaly\.com[NC]
+RewriteCond %{HTTP_REFERER} .*shopping\.ilovevitaly\.co[NC]
+RewriteCond %{HTTP_REFERER} .*ilovevitaly.*[NC]
+RewriteCond %{HTTP_REFERER} .*localmoxie\.com [NC]
+RewriteCond %{HTTP_REFERER} .*7makemoneyonline\.com [NC]
+RewriteCond %{HTTP_REFERER} .*sharebutton\.net [NC]
+RewriteCond %{HTTP_REFERER} .*blackhatworth\.com [NC]
+RewriteCond %{HTTP_REFERER} .*free-share-buttons\.com [NC]
+RewriteCond %{HTTP_REFERER} .*event-tracking\.com [NC]
+RewriteCond %{HTTP_REFERER} .*best-seo-offer\.com [NC]
+RewriteCond %{HTTP_REFERER} .*buttons-for-your-website\.com [NC]
+RewriteCond %{HTTP_REFERER} .*4webmasters\.org [NC]
+RewriteCond %{HTTP_REFERER} .*trafficmonetize\.org [NC]
+RewriteCond %{HTTP_REFERER} .*event-tracking\.com [NC]
+RewriteCond %{HTTP_REFERER} .*sanjosestartups\.com [NC]
+RewriteCond %{HTTP_REFERER} .*event-tracking\.com [NC]
+RewriteCond %{HTTP_REFERER} .*free-social-buttons\.com [NC]
+RewriteCond %{HTTP_REFERER} .*howtostopreferralspam\.eu [NC]
+RewriteCond %{HTTP_REFERER} .*best-seo-offer\.com [NC]
+RewriteCond %{HTTP_REFERER} .*ilovevitaly\.com [NC]
+RewriteCond %{HTTP_REFERER} .*free-social-buttons\.com [NC]
+RewriteRule ^.* - [F,L]
+
+
+Redirect 301 /welcome-to-my-blog/ /
+Redirect 301 /gitignore-for-c-projects/ /
+
+Redirect 301 /how-to-tell-if-a-transform-is-facing-another-in-unity3d/ /2013/06/11/
+Redirect 301 /unity3d-error-building-player-win32exception-applicationnamejava-exe/ /2013/07/09/
+Redirect 301 /turning-an-enum-into-a-dropdownlist-for-mvc/ /2013/07/13/
+Redirect 301 /graphs-and-pathing-in-csharp/ /2013/08/04/
+Redirect 301 /all-family-matters/ /2013/09/26/
+Redirect 301 /installing-ruby-and-rails-on-ubuntu-12-04-lts/ /2013/10/11/
+Redirect 301 /sass-up-your-css-with-sass-syntactically-awesome-stylesheets/ /2013/10/19/
+Redirect 301 /removing-a-blocked-ip-from-fail2ban-on-a-linode/ /2013/10/31/
+Redirect 301 /setting-up-bundler/ /2014/03/28/
+Redirect 301 /a-quick-wasd-controller-for-unity/ /2014/04/04/
+Redirect 301 /communication-between-iframes-with-support-for-ie8-and-ie-9-using-jquery/ /2014/04/17/
+Redirect 301 /chessboard-using-javascript-and-html5-canvas/ /2014/06/01/
+Redirect 301 /valantonini-com/ /2014/07/27/
+Redirect 301 /passing-a-property-to-a-method-in-c/ /2014/11/14/
+Redirect 301 /graphs-and-pathing-in-c-part-2/ /2014/12/22/
+Redirect 301 /priority-queue-in-c/ /2014/12/23/
+Redirect 301 /priority-queue-in-c-part-2/ /2014/12/25/
+
+Redirect 301 /tag/c-2 /tag/csharp
+Redirect 301 /category/c /category/csharp
+Redirect 301 /category/mvc /category/asp.net%20mvc/
+
+
+
+
+
+
+SetEnvIfNoCase Referer semalt.com spambot=yes
+SetEnvIfNoCase Referer buttons-for-website.com spambot=yes
+SetEnvIfNoCase Referer darodar.com spambot=yes
+SetEnvIfNoCase Referer 7makemoneyonline.com spambot=yes
+SetEnvIfNoCase Referer ilovevitaly.co spambot=yes
+SetEnvIfNoCase Referer myftpupload.com spambot=yes
+SetEnvIfNoCase Referer econom.co spambot=yes
+SetEnvIfNoCase Referer iskalko.ru spambot=yes
+SetEnvIfNoCase Referer ilovevitaly.ru spambot=yes
+SetEnvIfNoCase Referer ilovevitaly.com spambot=yes
+SetEnvIfNoCase Referer o-o-8-o-o.ru spambot=yes
+SetEnvIfNoCase Referer o-o-6-o-o.ru spambot=yes
+SetEnvIfNoCase Referer cenoval.ru spambot=yes
+SetEnvIfNoCase Referer priceg.com spambot=yes
+SetEnvIfNoCase Referer cenokos.ru spambot=yes
+SetEnvIfNoCase Referer seoexperimenty.ru spambot=yes
+SetEnvIfNoCase Referer gobongo.info spambot=yes
+SetEnvIfNoCase Referer vodkoved.ru spambot=yes
+SetEnvIfNoCase Referer adcash.com spambot=yes
+SetEnvIfNoCase Referer websocial.me spambot=yes
+SetEnvIfNoCase Referer cityadspix.com spambot=yes
+SetEnvIfNoCase Referer luxup.ru spambot=yes
+SetEnvIfNoCase Referer ykecwqlixx.ru spambot=yes
+SetEnvIfNoCase Referer superiends.org spambot=yes
+SetEnvIfNoCase Referer slftsdybbg.ru spambot=yes
+SetEnvIfNoCase Referer edakgfvwql.ru spambot=yes
+SetEnvIfNoCase Referer socialseet.ru spambot=yes
+SetEnvIfNoCase Referer screentoolkit.com spambot=yes
+SetEnvIfNoCase Referer savetubevideo.com spambot=yes
+SetEnvIfNoCase Referer blackhatworth.com spambot=yes
+SetEnvIfNoCase Referer social-buttons.com spambot=yes
+SetEnvIfNoCase Referer humanorightswatch.org spambot=yes
+SetEnvIfNoCase Referer aliexpress.com spambot=yes
+SetEnvIfNoCase Referer o-o-6-o-o.com spambot=yes
+SetEnvIfNoCase Referer priceg.com spambot=yes
+SetEnvIfNoCase Referer blackhatworth.com spambot=yes
+SetEnvIfNoCase Referer best-seo-solution.com spambot=yes
+SetEnvIfNoCase Referer 4webmasters.org spambot=yes
+SetEnvIfNoCase Referer .*social-buttons.com spambot=yes
+
+
+Order allow,deny
+Order allow,deny
+Allow from all
+Deny from env=spambot

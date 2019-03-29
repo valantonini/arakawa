@@ -20,9 +20,12 @@ The final setup is:
 - [Bulma](https://bulma.io "Bulma") 
 - [Sass](https://sass-lang.com "Sass")
 - [PugJS](https://pugjs.org/ "PugJS")
+- [Jekyll simple search](https://github.com/christian-fei/Simple-Jekyll-Search "Jekyll simple search")
 - [Typescript](https://www.typescriptlang.org "Typescript")
 - [Highlightjs](https://highlightjs.org/ "highlightjs")
 - [Gulp](https://gulpjs.com "Gulp")
 - Markdown for content
 
 [PurgeCss](https://github.com/FullHuman/purgecss "purgecss") is used to trim down all the excess and deliver a front page around ~100kB, 85kb of which are images and fonts.
+
+Source code can be found [here](https://github.com/valantonini/arakawa "github/valantonini/arakawa").
