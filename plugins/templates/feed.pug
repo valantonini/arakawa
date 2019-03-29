@@ -8,7 +8,7 @@ rss(xmlns:atom="http://www.w3.org/2005/Atom", version="2.0")
         for entry in entries
             item
                 title=entry.metadata.title
-                description=entry.metadata.body
+                description=typogr(entry.html).typogrify()
                 pubdate=entry.metadata.date
                 link=locals.url + entry.url
                 guid(isPermaLink="true")=locals.url + entry.url

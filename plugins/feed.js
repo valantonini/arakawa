@@ -17,7 +17,7 @@ function index (env, callback) {
 
         const entries = env.helpers.contents.list(contents.posts).filter((entry) => (
           entry instanceof env.plugins.MarkdownPage && !entry.metadata.noindex
-        ))
+        )).sort((a, b) => b.metadata.date - a.metadata.date);
         const context = _.merge({entries}, locals)
 
         callback(null, Buffer.from(template(context)))
