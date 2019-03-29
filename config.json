@@ -35,5 +35,8 @@
   "paginator": {
     "perPage": 3,
     "articles": "posts"
+  },
+  "feed": {
+    "articles": "posts"
   }
 }

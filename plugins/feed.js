@@ -2,6 +2,19 @@ const _ = require('lodash')
 const pug = require('pug')
 
 function index(env, callback) {
+
+  const defaults = {
+    articles: 'articles', // directory containing contents to paginate
+  };
+
+  // assign defaults any option not set in the config file
+  const options = env.config.feed || {};
+  for (const key in defaults) {
+    if (options[key] == null) {
+      options[key] = defaults[key];
+    }
+  }
+
   class Feed extends env.plugins.Page {
     getFilename() {
       return 'feed.xml'
@@ -16,7 +29,7 @@ function index(env, callback) {
         const template = pug.compileFile(`${__dirname}/templates/feed.pug`)
 
         const entries = env.helpers.contents
-          .list(contents.posts)
+          .list(contents[options.articles])
           .filter((entry) => (
             entry instanceof env.plugins.MarkdownPage && !entry.metadata.noindex
           ))
