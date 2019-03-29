@@ -31,9 +31,8 @@ const scss = () => {
     return src('contents/styles/site.scss')
         .pipe(concat('site.min.css'))
         .pipe(sass({
-            //sourceMap: true,
+            sourceMap: false,
             outputStyle: 'compressed',
-            //outputStyle: 'nested',
             "includePaths": [
                 "node_modules/",
                 "content/styles"
@@ -42,7 +41,6 @@ const scss = () => {
         .pipe(dest('contents/styles'))
 }
 
-// dev
 const cleanJs = () => {
     return src('contents/scripts/site.min.js', {
             allowEmpty: true
@@ -72,7 +70,6 @@ const js = () => {
             sourcemaps: false
         }))
 };
-
 
 // build
 const cleanBuild = () => {
@@ -107,12 +104,9 @@ Object.assign(exports, {
     styles,
     build,
     publish,
-    default: build
-    });
-
-const watchFiles = (done) => {
-    build(done);
-    return watch(['contents/scripts/*.ts', 'contents/scripts/*.js', 'contents/styles/*.scss', '!contents/scripts/*.min.js'], build);
-}
-
-exports.watch = watchFiles;
+    default: build,
+    watch: (done) => {
+        build(done);
+        return watch(['contents/scripts/*.ts', 'contents/scripts/*.js', 'contents/styles/*.scss', '!contents/scripts/*.min.js'], build);
+    }
+});
