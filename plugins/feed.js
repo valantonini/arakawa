@@ -1,13 +1,13 @@
 const _ = require('lodash')
 const pug = require('pug')
 
-function index (env, callback) {
+function index(env, callback) {
   class Feed extends env.plugins.Page {
-    getFilename () {
+    getFilename() {
       return 'feed.xml'
     }
 
-    getView () {
+    getView() {
       return (env, locals, contents, templates, callback) => {
         if (!locals.url) {
           return callback(new Error('locals.url must be defined.'))
@@ -15,10 +15,16 @@ function index (env, callback) {
 
         const template = pug.compileFile(`${__dirname}/templates/feed.pug`)
 
-        const entries = env.helpers.contents.list(contents.posts).filter((entry) => (
-          entry instanceof env.plugins.MarkdownPage && !entry.metadata.noindex
-        )).sort((a, b) => b.metadata.date - a.metadata.date);
-        const context = _.merge({entries}, locals)
+        const entries = env.helpers.contents
+          .list(contents.posts)
+          .filter((entry) => (
+            entry instanceof env.plugins.MarkdownPage && !entry.metadata.noindex
+          ))
+          .sort((a, b) => b.metadata.date - a.metadata.date);
+
+        const context = _.merge({
+          entries
+        }, locals)
 
         callback(null, Buffer.from(template(context)))
       }
@@ -26,7 +32,9 @@ function index (env, callback) {
   }
 
   env.registerGenerator('feed', (contents, callback) => {
-    callback(null, {'feed.xml': new Feed()})
+    callback(null, {
+      'feed.xml': new Feed()
+    })
   })
 
   callback()
