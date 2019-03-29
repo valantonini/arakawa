@@ -16,10 +16,8 @@ const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 
 // dev
-const cleanworking = () => {
-    return src('contents/scripts/site.min.js', {
-            allowEmpty: true
-        }, 'contents/styles/site.min.css', {
+const cleanCss = () => {
+    return src('contents/styles/site.min.css', {
             allowEmpty: true
         }, 'contents/scripts/search.min.css', {
             allowEmpty: true
@@ -42,6 +40,16 @@ const scss = () => {
             ]
         }).on('error', sass.logError))
         .pipe(dest('contents/styles'))
+}
+
+// dev
+const cleanJs = () => {
+    return src('contents/scripts/site.min.js', {
+            allowEmpty: true
+        })
+        .pipe(clean({
+            force: true
+        }));
 }
 
 const ts = () => {
@@ -67,7 +75,7 @@ const js = () => {
 
 
 // build
-const cleanbuild = () => {
+const cleanBuild = () => {
     return src('build', {
             allowEmpty: true
         })
@@ -78,7 +86,7 @@ const cleanbuild = () => {
 
 const buildwintersmith = (done) => wintersmith.build(() => done());
 
-const purge = () => {
+const purgeUnusedCss = () => {
     return src('build/**/*.css')
         .pipe(concat('site.min.css'))
         .pipe(
@@ -89,22 +97,22 @@ const purge = () => {
         .pipe(dest('build/styles'));
 }
 
-exports.build  = (done) => {
-    series(cleanworking)();
-    parallel(ts, js, scss)();
-    done();
+const scripts = series(cleanJs, parallel(ts, js));
+const styles = series(cleanCss, scss);
+const build = parallel(scripts, styles);
+const publish = series(cleanBuild, build, buildwintersmith, purgeUnusedCss);
+
+Object.assign(exports, {
+    scripts,
+    styles,
+    build,
+    publish,
+    default: build
+    });
+
+const watchFiles = (done) => {
+    build(done);
+    return watch(['contents/scripts/*.ts', 'contents/scripts/*.js', 'contents/styles/*.scss', '!contents/scripts/*.min.js'], build);
 }
 
-exports.default = exports.build;
-
-exports.watch = (done) => {
-    exports.default(done);
-    return watch(['contents/scripts/*.ts', 'contents/scripts/*.js', 'contents/styles/*.scss', '!contents/scripts/*.min.js'], exports.default);
-}
-
-exports.publish = (done) => {
-    parallel(cleanworking, cleanbuild)();
-    parallel(ts, js, scss)();
-    series(buildwintersmith, purge)();
-    done();
-}
+exports.watch = watchFiles;
