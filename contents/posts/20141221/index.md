@@ -7,7 +7,7 @@ date: 2014-12-21
 template: article.pug
 location: /2014/12/21
 ---
----
+
 A while ago [I created an implementation of Dijkstra's algorithm](/2013/08/03 "Graphs and pathing in C#") for pathfinding. It turns out there was a bug that meant although it found a path, it wasn't always the shortest. I thought this was a great chance to re-write it and implement some of the performance tips I received.
 
 The project can be found on Github [here](https://github.com/valantonini/GraphCollection "Github - valantonini/GraphCollection").
