@@ -14,7 +14,7 @@
   ],
   "filenameTemplate": "/{{ page.metadata.location }}/index.html",
   "plugins": [
-    "./plugins/paginator.js",
+    "wintersmith-paginator",
     "./plugins/search.js",
     "wintersmith-contents",
     "wintersmith-sitemap",

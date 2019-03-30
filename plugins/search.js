@@ -20,8 +20,8 @@ function index(env, callback) {
                     }
                     search.push({
                         title: e.title,
-                        category: e.category || "abc",
-                        tags: e.metadata.tags ? e.metadata.tags.join(",") : "abc",
+                        category: e.category || "",
+                        tags: e.metadata.tags ? e.metadata.tags.join(",") : "",
                         url: e.metadata.location,
                         date: moment(e.date)
                     })
