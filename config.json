@@ -15,10 +15,10 @@
   "filenameTemplate": "/{{ page.metadata.location }}/index.html",
   "plugins": [
     "./plugins/paginator.js",
-    "./plugins/feed.js",
     "./plugins/search.js",
     "wintersmith-contents",
-    "wintersmith-sitemap"
+    "wintersmith-sitemap",
+    "wintersmith-feed"
   ],
   "require": {
     "moment": "moment",
