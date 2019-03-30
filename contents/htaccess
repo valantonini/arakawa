@@ -30,7 +30,7 @@ RewriteCond %{HTTP_REFERER} .*ilovevitaly\.com [NC]
 RewriteCond %{HTTP_REFERER} .*free-social-buttons\.com [NC]
 RewriteRule ^.* - [F,L]
 
-
+Redirect 301 /feed /feed.xml
 Redirect 301 /welcome-to-my-blog/ /
 Redirect 301 /gitignore-for-c-projects/ /
 
