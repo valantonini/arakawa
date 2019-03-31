@@ -15,9 +15,9 @@ script:
   - gulp publish
 after_success:
   - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
-  - git clone git://${GH_REPO}
-  - mv -f build/* ${REPO}
-  - cd ${REPO}
+  - git clone git://${GH_REPO} ../${REPO}
+  - mv -f build/* ../${REPO}
+  - cd ../${REPO}
   - git add *
   - git commit -a -m ${MESSAGE}
   - git push "https://${GH_TOKEN}@${GH_REPO}" master 
