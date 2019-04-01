@@ -21,8 +21,8 @@ after_success:
   - ls
   - git config --global user.email ${EMAIL}
   - git config --global user.name ${USER}
-  - git add *
-  - git commit -a -m ${MESSAGE}
+  - git add --all
+  - git commit --all -m ${MESSAGE}
   - git push "https://${GH_TOKEN}@${GH_REPO}" master > /dev/null 2>&1
 
   
