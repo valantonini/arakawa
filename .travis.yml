@@ -4,7 +4,7 @@ node_js:
 env:
   global:
   - USER="valantonini"
-  - EMAIL="val.antonini@mail.com"
+  - EMAIL="val.antonini@gmail.com"
   - REPO="travisci-test"
   - GH_REPO="github.com/${USER}/${REPO}.git"
 install:
