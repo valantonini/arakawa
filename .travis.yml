@@ -18,7 +18,7 @@ after_success:
   - git clone git://${GH_REPO} ../${REPO}
  # - mv -f build/* ../${REPO}
   - cd ../${REPO}
-  - git rm - r *
+  - git rm -r *
   - git commit -m "removing old"
   - mv ../arakawa/build/* .
   - git remote rm origin
