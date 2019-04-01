@@ -25,7 +25,7 @@ after_success:
   - git add --all
   - git fetch
   #- git commit --all -m ${MESSAGE}
-  - git commit "test"
+  - git commit -m "test"
   - git push "https://${GH_TOKEN}@${GH_REPO}" master > /dev/null 2>&1
 
   
