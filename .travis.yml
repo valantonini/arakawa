@@ -19,8 +19,9 @@ after_success:
   - mv -f build/* ../${REPO}
   - cd ../${REPO}
   - git fetch
-  - git config --global user.email ${EMAIL}
-  - git config --global user.name ${USER}
+  - git remote
+  - git config user.email ${EMAIL}
+  - git config user.name ${USER}
   - git add --all
   - git log
   - git commit -m ${MESSAGE}
