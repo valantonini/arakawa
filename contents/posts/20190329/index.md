@@ -3,9 +3,9 @@ tags: ["Web Development"]
 categories: ["Web Development"]
 title: "Site rewrite"
 author: val antonini
-date: 2019-04-29
+date: 2019-03-29
 template: article.pug
-location: /2019/04/29
+location: /2019/03/29
 ---
 
 I moved this blog away from wordpress in 2014 and decided to write it using [Jekyll](https://jekyllrb.com "Jekyll"). At the time I really was fascinated by Ruby and wanted to learn it and it seemed like a great opportunity. I was also unhappy with the responsive wordpress themes at the time.
