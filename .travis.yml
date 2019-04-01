@@ -26,8 +26,8 @@ after_success:
   - git config user.name ${USER}
   - git add --all
   - git fetch
-  #- git commit --all -m ${MESSAGE}
-  - git commit -m "updated"
+  - git commit --all -m ${MESSAGE}
+  #- git commit -m "updated"
   - git push "https://${GH_TOKEN}@${GH_REPO}" master > /dev/null 2>&1
 
   
