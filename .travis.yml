@@ -16,8 +16,11 @@ script:
 after_success:
   - MESSAGE=$(git log --format=%B -n 1 $TRAVIS_COMMIT)
   - git clone git://${GH_REPO} ../${REPO}
-  - mv -f build/* ../${REPO}
+ # - mv -f build/* ../${REPO}
   - cd ../${REPO}
+  - git rm - r *
+  - git commit -m "removing old"
+  - mv ../arakawa/build/* .
   - git remote rm origin
   - git remote add origin "https://${GH_TOKEN}@${GH_REPO}"
   - git config user.email ${EMAIL}
