@@ -18,12 +18,11 @@ after_success:
   - git clone git://${GH_REPO} ../${REPO}
   - mv -f build/* ../${REPO}
   - cd ../${REPO}
-  - git fetch
-  - git remote
+  - git remote rm origin
+  - git remote add origin "https://${GH_TOKEN}@${GH_REPO}"
   - git config user.email ${EMAIL}
   - git config user.name ${USER}
   - git add --all
-  - git log
   - git commit -m ${MESSAGE}
   - git push "https://${GH_TOKEN}@${GH_REPO}" master > /dev/null 2>&1
 
