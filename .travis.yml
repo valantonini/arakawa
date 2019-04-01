@@ -19,7 +19,7 @@ deploy:
   github_token: $GH_TOKEN
   keep_history: true
   local_dir: build
-  repo: github.com/valantonini/valantonini.github.io
+  repo: valantonini/valantonini.github.io
   target_branch: master
   fqdn: valantonini.com
   email: $GH_EMAIL
