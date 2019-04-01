@@ -12,7 +12,7 @@ I moved this blog away from wordpress in 2014 and decided to write it using [Jek
 
 I've been working almost exclusively in Javascript and Typescript the last 6 months and have really enjoyed it. I decided to rewrite the blog in [Wintersmith](http://wintersmith.io "Wintersmith") as it seemed like easier to maintain and I feel ok open sourcing it as it's not a bunch of barely functioning, badly written Ruby and spaghetti css.
 
-I still love my initial design I came up with in 2014 and used more or less the same design. It's also been 6 months since I've used JQuery for web development so I opted for a custom compiled [Bulma](https://bulma.io "Bulma") instead of Bootstrap as I didn't want any JQuery dependencies. I initially started out using [Spectre](https://picturepan2.github.io/spectre/ "Spectre") but found some of the things I really liked such as off canvas was marked as experimental and not quite working how I intended.
+I still love my initial design I came up with in 2014 and used more or less the same design. It's also been 6 months since I've used jQuery for web development so I opted for a custom compiled [Bulma](https://bulma.io "Bulma") instead of Bootstrap as I didn't want any JQuery dependencies. I initially started out using [Spectre](https://picturepan2.github.io/spectre/ "Spectre") but found some of the things I really liked such as off canvas was marked as experimental and not quite working how I intended.
 
 The final setup is:
 
