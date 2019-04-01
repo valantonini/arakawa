@@ -18,6 +18,7 @@ after_success:
   - git clone git://${GH_REPO} ../${REPO}
   - mv -f build/* ../${REPO}
   - cd ../${REPO}
+  - ls
   - git config --global user.email ${EMAIL}
   - git config --global user.name ${USER}
   - git add *
