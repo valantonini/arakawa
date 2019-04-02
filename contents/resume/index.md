@@ -37,6 +37,9 @@ location: /resume
 - VueCli
 - SASS
 - Jekyll
+- Wintersmith
+- jQuery
+- Knockout
 
 #### other
 - Git
