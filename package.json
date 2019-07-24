@@ -20,9 +20,9 @@
     "typogr": "0.6.x",
     "underscore": "^1.9.1",
     "wintersmith-contents": "^1.0.0",
-    "wintersmith-feed": "0.0.3",
-    "wintersmith-paginator": "0.0.1",
-    "wintersmith-search": "0.0.1",
+    "wintersmith-feed": "0.0.4",
+    "wintersmith-paginator": "0.0.2",
+    "wintersmith-search": "0.0.2",
     "wintersmith-sitemap": "^1.0.0"
   }
 }
