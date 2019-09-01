@@ -1,18 +1,7 @@
 .contact {
-    label {
-        @extend .label;
-    }
+    text-align: center;
 
-    input {
-        @extend .input;
-    }
-
-    textarea {
-        @extend .textarea;
-    }
-
-    button {
-        @extend .button;
-        @extend .is-link;
+    .emailaddress {
+        margin-top: $paragraph-spacing;
     }
 }

@@ -6,23 +6,7 @@ block prepend title
 block content
     header
         h1 contact
-        h2 brisbane based software developer
     section.contact
-        form(action="https://getsimpleform.com/messages?form_api_token=5d79bdfcb8e322633739d55a81fadd41", method="post")
-            input(type='hidden', name='redirect_to', value=locals.url + '/success')
-            input(type='hidden', name='akismet_key', value='789795376a8f')
-            .field
-                label name
-                .control
-                    input(name="name", type="text", placeholder="name")
-            .field
-                label email
-                .control
-                    input(name="email", type="email", placeholder="email")
-            .field
-                label message
-                .control
-                    textarea(name="message", type="message", placeholder="message")
-            .field
-                .control
-                    button submit
+        div to get in touch, please email me at
+        div.emailaddress
+            a(href="mailto:vantonini@protonmail.com") vantonini@protonmail.com
