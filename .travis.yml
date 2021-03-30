@@ -12,7 +12,7 @@ install:
   - npm install gulp-cli -g
   - npm install
 script:
-  - gulp publish
+  - npm run publish
 deploy:
   provider: pages
   skip_cleanup: true

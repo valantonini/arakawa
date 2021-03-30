@@ -1,6 +1,9 @@
 # OS
 .DS_Store
 
+#webstorm
+.idea
+
 # Wintersmith
 build
 contents/scripts/site.min.js

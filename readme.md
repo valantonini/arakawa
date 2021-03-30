@@ -16,3 +16,10 @@
 - Markdown for content
 
 [PurgeCss](https://github.com/FullHuman/purgecss "purgecss") is used to trim down all the excess and deliver a front page around ~100kB, 85kb of which are images and fonts.
+
+# Running the project
+
+```bash
+npm install 
+npm run serve 
+```

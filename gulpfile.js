@@ -4,6 +4,7 @@ const tsc = require('gulp-typescript');
 const clean = require('gulp-clean');
 const purgecss = require('gulp-purgecss');
 const wintersmith = require('run-wintersmith');
+
 const {
     src,
     dest,
@@ -98,6 +99,7 @@ const scripts = series(cleanJs, parallel(ts, js));
 const styles = series(cleanCss, scss);
 const build = parallel(scripts, styles);
 const publish = series(cleanBuild, build, buildwintersmith, purgeUnusedCss);
+
 
 Object.assign(exports, {
     scripts,
