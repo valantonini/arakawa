@@ -10,10 +10,10 @@ location: /2021/04/01
 
 A few years ago I needed a path finding algorithm in a hurry for a procedural level generator I was trying to write. I
 managed to find a C# one that supported a number of options and was focused on performance. I reached out to the author
-if they minded if I changed it a bit and package it up as a nuget. The author agreed and I used the library in a couple
+if they minded if I [changed it a bit and package it up as a nuget](https://github.com/valantonini/AStar). The author agreed, and I used the library in a couple
 procedural level generators such as [this one](/2018/09/30).
 
-Recently a couple people reached out with some questions about the implementations of it including an interesting one
+Recently a couple of people reached out with some questions about the implementations of it including an interesting one
 from Lucas:
 
 > ...
@@ -28,8 +28,8 @@ from Lucas:
 I thought this was an interesting question and decided to take this opportunity to completely rewrite it trading off a
 little speed for some more organized code allowing easier extensibility and readability.
 
-The basic permise of the algorithm is that as the A* algorithm is fanning out checking nodes, it calculates the nodes
-distance from it's start position (G) and the distance to the target position (H) and adds these togethor to produce F.
+The basic premise of the algorithm is that as the A* algorithm is fanning out checking nodes, it calculates the nodes
+distance from its start position (G) and the distance to the target position (H) and adds these togethor to produce F.
 
 ```cs
 var updatedSuccessor = new PathFinderNode(
@@ -81,4 +81,6 @@ other tests and it appeared to work:
 1 1 1 1 1 1 1 
 ```
 
-I'll need to do some further expirementing but it seems promising.
+I'll need to do some further tests, but it seems promising. 
+
+You can find the algorithm on [github](https://github.com/valantonini/AStar).
