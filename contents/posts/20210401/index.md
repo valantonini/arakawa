@@ -54,8 +54,8 @@ around it.
 </div>
 
 Because the world passed into the algorithm is a multidimensional array of short where 0 indicates a closed node, I
-wondered if I could just add the value of the open tile the user passed in to offset the G value (the distance from
-home). This should guide the algorithm into favouring higher positive numbers.
+wondered if I could just add the value of the open tile the user passed in to offset the H value (the distance to
+the target). This should guide the algorithm into favouring higher positive numbers as they appear closer to the target.
 
 ```cs
 var updatedSuccessor = new PathFinderNode(
