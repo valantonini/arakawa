@@ -1,3 +1,4 @@
+@use "sass:math";
 .resume {
     h3 {
         font-size: $size-4;
@@ -12,8 +13,8 @@
     h4 {
         font-size: $size-5;
         text-decoration: underline;
-        margin-top: $paragraph-spacing / 2;
-        margin-bottom: $paragraph-spacing / 2;
+        margin-top: math.div($paragraph-spacing, 2);
+        margin-bottom: math.div($paragraph-spacing, 2);
     }
 
     ul {
