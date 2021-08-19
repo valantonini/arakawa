@@ -16,10 +16,3 @@
 @import "code";
 @import "pagination";
 @import "footer";
-
-img[src^='/images/icons/'],
-img[src='/images/logo.png'] {
-  margin: 10px;
-  width: 25px;
-  height: 25px;
-}

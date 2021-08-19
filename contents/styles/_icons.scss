@@ -1,6 +1,7 @@
 img[src^='/images/icons/'],
-img[src='/images/logo.png'] {
+img[src='/images/logo.png'],
+img.icon {
    margin: 10px;
-   width: 25px;
-   height: 25px;
+   width: 25px !important;
+   height: 25px !important;
 }
