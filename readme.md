@@ -20,7 +20,7 @@
 # Running the project
 
 ```bash
-# nvm use node 14.17.5
+# nvm use 14.17.5
 npm install 
 npm run serve 
 ```

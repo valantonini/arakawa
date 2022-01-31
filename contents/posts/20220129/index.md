@@ -1,7 +1,7 @@
 ---
 tags: ["Books", "Software engineering"]
 categories: ["Books"]
-title: "favourite reads of 2021"
+title: "favourite books of 2021"
 author: val antonini
 date: 2022-01-29
 template: article.pug
