@@ -6,52 +6,67 @@ location: /resume
 
 ### overview 
 
-#### node
+#### Languages
+- Go
+- C# 
+- Typescript
+- Javascript
+- SQL
+- CSS / Less / Sass
+- Go 
 
-- VueJS
-- NodeJS
-- Typescript / Javascript
-- Mocha / Chai
-- Test Cafe
-- npm
-- Gulp
-- Wintersmith
 
-#### .net
-- ASP.Net Core (C#)
-- Entity Framework Core
-- NServiceBus
-- RabbitMQ
-- NUnit
-- Spec Flow
-- MS SQL
+#### Frameworks / Libraries
+- ASP.Net Core
+- VueJS / React
+- Node
 - SignalR
-- Windows Services
-- DBUp / Fluent Migrations
+- Protocol Buffers
+- Unit Testing (NUnit / Moq / NSubstitute / Specflow / Mocha)
+- UI Testing (Cypress / Selenium)
+- CSS Frameworks (Bootstrap / Bulma)
+- ORM (Entity Framework / Dapper)
 - Hangfire
-- SignalR
 
-#### front end / frameworks
-- Bootstrap 
-- Bulma
-- VueCli
-- SASS
-- Jekyll
-- Wintersmith
-- jQuery
-- Knockout
 
-#### other
-- Git
-- Unity
-- Team City / Bamboo / VSTS
-- Octopus Deploy
+#### Technologies
+- MSSQL Server
+- Docker / Kubernetes
+- RabbitMQ (NServiceBus / Mass Transit)
+- CI / CD (Bamboo / TFS / TeamCity / Jenkins / Octopus Deploy)
+
+
+#### Software Development
+- RESTful API
+- Design Patterns
+- Domain Driven Design
+- Distributed Systems
+- Service Oriented Architecture
+- Test Driven Development
+- Behaviour Driven Development
+
+
 
 ### experience
 
+#### Patient Zero
+
+2021 - present
+
+Senior software engineer delivering full stack projects in a range of technologies across a variety of domains. 
+
+- ASP.Net Core
+- React
+- Typescript
+- Kubernetes
+- Azure
+- RabbitMQ
+- SignalR
+
+
 #### Deswik 
 
-2018 - Present
+2018 - 2021
 
 Senior software engineer on Deswik.MDM, a spatial database and process workflow management tool for mining.
 
@@ -59,14 +74,13 @@ Senior software engineer on Deswik.MDM, a spatial database and process workflow 
 - Typescript
 - ASP.Net Core
 - C#
+- Protobuf
 - NodeJS
 - SASS
 - Bamboo / Jenkins
 - Octopus Deploy
 - NServiceBus
 - RabbitMQ
-- Windows Services
-- Topshelf
 - SignalR
 - Autofac
 - Git

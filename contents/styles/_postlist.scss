@@ -1,4 +1,6 @@
 .post-list {
+    height: auto;
+    min-height: 100%;
     header {
         text-align: center;
         margin-bottom: 0;
@@ -17,4 +19,5 @@
             line-height: 3.5;
         }
     }
+    margin-bottom: 50px;
 }
