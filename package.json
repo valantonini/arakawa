@@ -20,7 +20,7 @@
     "gulp-sass": "^5.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-uglify-es": "^3.0.0",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "pug": "^3.0.2",
     "purgecss": "^4.0.3",
     "run-wintersmith": "0.0.4",
